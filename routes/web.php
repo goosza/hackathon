@@ -14,16 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
 Route::get('/freetutorials',function(){
     return view("freetutorials");
 });
 Route::get('/notfreetutorials',function(){
     return view('notfreetutorials'); 
 });
+
+
 Route::get('/post',function(){
     return view('post');
 });
     
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
