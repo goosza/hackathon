@@ -1,25 +1,22 @@
 @extends('layout') @section('content')
-<div class="container">
+<div class="container" style="margin-top:30px;">
     <iframe width="100%" height="400px" src="https://www.youtube.com/embed/dXr7Dc3M6po?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
     <div class="comments">
         <h2>Comments</h2>
         <ul class="list-group">
+           @foreach($comments as $com)
             <li class="list-group-item">
-                <strong>User: </strong><span>Comment</span>
+                <strong>{{$com->user->name}}: </strong><span>{{$com->comment}}</span>
             </li>
-            <li class="list-group-item">
-                <strong>User: </strong><span>Comment</span>
-            </li>
-            <li class="list-group-item">
-                <strong>User: </strong><span>Comment</span>
-            </li>
+            @endforeach
         </ul>
     </div>
     <div class="card-block" style="margin-top:20px;">
-        <form action="">
+        <form action="/post" method="POST">
+            {{ csrf_field() }}
             <div class="form-group">
-                <textarea name="body" placeholder="Your comment here" class="form-control"></textarea>
+                <textarea name="comment" placeholder="Your comment here" class="form-control" ></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-dark">Add Comment</button>

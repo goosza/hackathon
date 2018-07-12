@@ -10,18 +10,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-
-
-
 Route::get('/post',function(){
-    return view('post');
+    $comments = App\Comment::get();
+    return view('post',['comments' => $comments]);
+});
+Route::post('/post',function(Request $req){
+    App\Comment::create([
+        "comment"=>$req->comment,
+        "user_id"=>Auth::user()->id,
+    ]);
+    return back();
+});
+Route::get('/buy',function(){
+    return view('buy');
 });
     
 

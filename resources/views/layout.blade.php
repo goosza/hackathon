@@ -50,9 +50,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <button id="sidebarCollapse" class="float-left btn btn-light" style="display:inline-block;">
-                        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons text-dark">menu</i></a>
-                    </button>
+                    
                     <div class="container">
                         <div class="row">
                             <div class="col-4"></div>
@@ -72,6 +70,12 @@
                     <ul class="navbar-nav float-right">
                         <!-- Authentication Links -->
                         @guest
+                         <li class="nav-item">
+                            <a class="nav-link" href="/community">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tutorials">Tutorials</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
@@ -79,10 +83,16 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="/community">Community</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/tutorials">Tutorials</a>
+                        </li>
                         <li class="nav-item dropdown" style="margin-right:60px;">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                            </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -117,7 +127,9 @@
 <script>
     $('.carousel').carousel();
 
-    $('.dropdown-toggle').dropdown()
+     $(document).ready(function(){
+        $('.dropdown-toggle').dropdown()
+    });
 
 </script>
 
