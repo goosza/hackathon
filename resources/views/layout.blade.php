@@ -17,13 +17,20 @@
     </head>
     <body>
         <nav class="navbar navbar-light bg-light" >
-          
-          <form class="form-inline" style="margin-left:38%;">
-            <img src="#" class="menu">
+          <img src="#">
+          <form class="form-inline" >
+            
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <img src="" alt="..." class="rounded-circle">
+            
           </form>
+            <img src="" alt="..." class="rounded-circle">
         </nav>
+        @yield("body")
     </body>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script></script>
 </html>
