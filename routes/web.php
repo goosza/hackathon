@@ -17,12 +17,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/freetutorials',function(){
-    return view("freetutorials");
-});
-Route::get('/notfreetutorials',function(){
-    return view('notfreetutorials'); 
-});
+
 
 
 Route::get('/post',function(){
@@ -33,3 +28,6 @@ Route::get('/post',function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tutorials',function(){
+    return view('tutorials');
+});
