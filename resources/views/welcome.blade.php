@@ -1,11 +1,12 @@
 @extends("layout")
 
-@section("body")
+
+@section("content")
 <br>
 <div class="preview">
     
 </div>
-    <div class="container topics">
+    <div class="container" style="width:50%">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -47,3 +48,5 @@
     </div>
     
 @endsection
+
+

@@ -20,9 +20,15 @@ Route::get('/', function () {
 Route::get('/freetutorials',function(){
     return view("freetutorials");
 });
-Route::get('/packets',function(){
-    return view('packets'); 
+Route::get('/notfreetutorials',function(){
+    return view('notfreetutorials'); 
 });
+
+
+Route::get('/post',function(){
+    return view('post');
+});
+    
 
 Auth::routes();
 

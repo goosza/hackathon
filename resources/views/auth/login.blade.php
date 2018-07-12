@@ -78,7 +78,7 @@ border-radius: 105px;">
 >>>>>>> b099541cd037caef4e3ed61189babfedb83321d2
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}>
                                     </label>
                                 </div>
                             </div>
