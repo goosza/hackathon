@@ -1,8 +1,16 @@
 @extends('layout')
-
+ @section('style')
+     <style>
+         body{
+             background-image:url('/img/background.png');
+             background-size:100%;
+             background-repeat:no-repeat;
+         }
+    </style>
+ @endsection
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-end" style="margin-top:20%;">
         <div class="col-md-8">
 
                 <div class="card-body">
@@ -16,7 +24,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right text-light">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -31,7 +39,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-light">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>
