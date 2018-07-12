@@ -34,7 +34,7 @@ border-radius: 105px;">
                             <div class="col-md-6 offset-md-4 text-light">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}>
                                     </label>
                                 </div>
                             </div>
